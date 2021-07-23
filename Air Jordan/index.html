@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- ===== META ===== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- ===== CDNJS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./img/icons-air-jordan.svg" type="image/x-icon">
+
+    <title>Air Jordan</title>
+    
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header-container">
+            <img class="header-logo" src="./img/jordan-logo.png" alt="jordan logo">
+        </div>
+    </header>
+
+    <!-- ===== SIDE NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+
+        <div class="nav-container">
+
+            <div>
+
+                <a href="#" class="nav-links nav-logo">
+                    <img src="./img/icons-air-jordan.svg" alt="jordan icon">
+                </a>
+
+                <div class="nav-list">
+
+                    <div class="nav-items">
+
+                        <h3 class="nav-subtitle">Account</h3>
+
+                        <a href="#" class="nav-links">
+                            <i class="uil uil-user nav-icon"></i>
+                            <span class="nav-name">Profile</span>
+                        </a>
+
+                        <a href="#loginform" class="nav-links" id="login">
+                            <i class="uil uil-signin nav-icon"></i>
+                            <span class="nav-name">Login</span>
+                        </a>
+
+                    </div>
+
+                    <div class="nav-items">
+
+                        <h3 class="nav-subtitle">Menu</h3>
+
+                        <a href="#" class="nav-links active">
+                            <i class="uil uil-home nav-icon"></i>
+                            <span class="nav-name">Home</span>
+                        </a>
+
+                        <!-- ===== DROPDOWN ===== -->
+                        <div class="nav-dropdown" id="dropdown">
+                                <a href="#" class="nav-links dropbtn">
+                                    <i class="uil uil-shopping-bag nav-icon"></i>
+                                    <span class="nav-name">Items</span>
+                                    <i class="uil uil-angle-down nav-icon nav-dropdown-icon"></i>
+                                </a>
+                            <div class="nav-dropdown-collapse submenu" id="myDropdown">
+                                <div class="nav-dropdown-content" id="dropdown-content">
+                                    <a href="#" class="nav-dropdown-item">Air Jordan 1's</a>
+                                    <a href="#" class="nav-dropdown-item">Air Jordan 3's</a>
+                                    <a href="#" class="nav-dropdown-item">Air Jordan 4's</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="nav-links">
+                            <i class="uil uil-shopping-cart-alt nav-icon"></i>
+                            <span class="nav-name">Order</span>
+                        </a>
+
+                        <a href="#" class="nav-links">
+                            <i class="uil uil-info-circle nav-icon"></i>
+                            <span class="nav-name">About Us</span>
+                        </a>
+
+                        <a href="#" class="nav-links">
+                            <i class="uil uil-message nav-icon"></i>
+                            <span class="nav-name">Contact Us</span>
+                        </a>
+
+
+                        <!-- ===== DARK MODE TOGGLE ===== -->
+                        <div class="dark-mode-toggle">
+                            <input type="checkbox" class="checkbox" id="checkbox">
+                            <label for="checkbox" class="label">
+                                <i class="fas fa-moon moon-icon"></i>
+                                <i class="fas fa-sun sun-icon"></i>
+                                <div class="ball"></div>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="designed">
+                <div>
+                    <span>Designed by Christian Villena</span>
+                </div>
+
+                <div>
+                    <i class="uil uil-location-point"></i> <span>Philippines</span>
+                    <i class="uil uil-copyright"></i> <span> 2021</span>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ===== LOGIN AND SIGN UP FORM -->
+    <div class="form">
+        <div class="login-form" id="loginform">
+            <a href="#" class="close-form">
+                <i class="fas fa-times"></i>
+            </a>
+
+            <strong>Login</strong>
+            <form class="input-form">
+                <input type="email" placeholder="Example@gmail.com" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <a href="#" class="submit-btn">Login</a>
+            </form>
+            <div class="fps-btn">
+                <a href="#" class="sign-up-btn">Create Account</a>
+            </div>
+        </div>
+
+        <div class="signup-form">
+            <a href="#" class="close-form">
+                <i class="fas fa-times"></i>
+            </a>
+
+            <strong>Sign up</strong>
+            <form class="input-form">
+                <input type="text" placeholder="Full Name" name="fullname" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <input type="password" placeholder="Confirm Password" name="password2" required>
+                <a href="#" class="submit-btn">Sign up</a>
+            </form>
+            <div class="fps-btn">
+                <a href="#" class="forget already">Already Have An Account?</a>
+               
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ===== FIXED TOGGLE ======  -->
+    <div class="fixed-toggle">
+        <div class="toggle-container">
+            <div class="toggle-fixed" id="fixed-toggle">
+                <div class="bars-container" id="menuz" >
+                    <span class="bars" id=""></span>
+                    <span class="bars" id=""></span>
+                    <span class="bars" id=""></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPT ===== -->
+    <script src="query2.js"></script>
+    <script src="query.js"></script>
+    
+</body>
+</html>

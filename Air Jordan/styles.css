@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    padding: 0 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--normal-font);
+    background-color:  var(--body-color);
+    color: var(--text-color);
+    transition: background 300ms linear;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-toggle {
+    color: white;
+    font-size: 3rem;
+    width: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    /* ===== COLOR ===== */
+    --chicagoRed: #bc032b;
+    /* --text-red-lighter: rgb(253, 197, 197); */
+    --text-red-lighter: rgb(252, 101, 101);
+    --body-color: #FFFFFF;
+    --text-color: #19181B;
+    --text-color-light: #58555E;
+
+
+    /* ===== FONT SIZE ===== */
+    --normal-font: .938rem;
+    --small-font: .75rem;
+    --smaller-font: .75rem;
+}
+
+/* ===== DARK THEME ===== */
+
+.dark-mode {
+    --body-color: #19181B;
+    --text-color: #FFFFFF;
+}
+
+
+@media screen and (min-width: 1024px) {
+    :root {
+      --normal-font: 1rem;
+      --small-font: .875rem;
+      --smaller-font: .813rem;
+    }
+}
+
+
+/* ===== FIXED TOGGLE ===== */
+
+.fixed-toggle {
+    width: 100%;
+    position: fixed;
+    z-index: 110;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 1.875rem;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: end;
+}
+
+.toggle-fixed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.bars-container {
+   padding: 20px 20px;
+   border-radius: 50%;
+   background-color: var(--chicagoRed);
+}
+
+.bars {
+    display: block;
+    border-radius: 10px;
+    width: 26px;
+    height: 2px;
+    background: white;
+    transition: all 300ms ease-in-out;
+    transform-origin: 2px 1px;
+}
+
+.bars:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.open .bars:first-child {
+    transform: rotate(45deg);
+    margin-left: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.open .bars:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bars:last-child {
+    transform: rotate(-45deg);
+    margin-left: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo {
+    cursor: pointer;
+    width: 80px;
+}
+
+
+/* ===== SIDEBAR ===== */
+
+.navbar {
+    position: fixed;
+    z-index: 111;
+    top: 0;
+    left: -100%;
+    padding: 1rem 1rem;
+    height: 100vh;
+    background-color: var(--body-color);
+    box-shadow: 2px 0 0 rgba(188, 3, 43, .1);
+    transition: 300ms ease-in-out;
+}
+
+.nav-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.nav-container::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-logo {
+    margin-bottom: 2.5rem;
+}
+
+.nav-list,
+.nav-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list {
+    gap: 2.5rem;
+}
+
+.nav-items {
+    gap: 1.5rem;
+    
+}
+
+.nav-links {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.nav-links:hover,
+.nav-links:focus {
+    color: var(--chicagoRed);
+}
+
+.nav-linksz:hover,
+.nav-linksz:focus {
+    color: var(--chicagoRed);
+}
+
+
+.nav-subtitle {
+    font-size: var(--normal-font);
+    text-transform: uppercase;
+    color: var(--text-color-light);
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+}
+
+.nav-name {
+    font-size: small;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.designed {
+    margin-top: 3rem;
+}
+
+.designed > * {
+    font-size: var(--smaller-font);
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.show-menu {
+    left: 0;
+}
+
+.active {
+    color: var(--chicagoRed);
+}
+
+
+/* ===== NAV DROPDOWN ===== */
+.nav-dropdown {
+    display: inline-block;
+    overflow: hidden;
+    transition: 300ms ease-in-out;
+}
+
+.nav-dropdown-collapse {
+    display: none;
+    background-color: var(--text-red-lighter);
+    border-radius: .25rem;
+    margin-top: 1rem;
+    transition: opacity 500ms;
+}
+
+.nav-dropdown-content {
+    display: grid;
+    row-gap: .5rem;
+    padding: .75rem 2.5rem .75rem 1.8rem;
+}
+
+.nav-dropdown-item {
+    font-size: var(--smaller-font);
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus {
+    color: var(--chicagoRed);
+}
+
+.nav-dropdown-icon {
+    margin-left: auto;
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* ===== DARKMODE TOGGLE ===== */
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    position: relative;
+}
+
+.ball {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    background-color: var(--body-color);
+    transition: transform 150ms linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.moon-icon {
+    color: var(--body-color);
+}
+
+.sun-icon {
+    color: var(--body-color);
+}
+
+
+/* ===== LOGIN AND SIGN UP FORM ===== */
+.form {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 122;
+    transition: 300ms ease-in-out;
+}
+
+
+
+.login-form,
+.signup-form {
+    position: relative;
+    width: 420px;
+    padding: 20px 10px;
+    background-color: var(--text-red-lighter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    transition: 300ms ease-in-out;
+}
+
+.form,
+.signup-form,
+.login-form {
+    display: none;
+    animation: fade 300ms;
+}
+
+.login-active,
+.login-active .login-form{
+    display: flex;
+    animation: fade 300ms;
+
+}
+
+.signup-active,
+.signup-active .signup-form{
+    display: flex;
+    animation: fade 300ms;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form strong,
+.signup-form strong {
+    color: white;
+    font-size: 2rem;
+    margin: 2px 7px 7px 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.login-form input,
+.signup-form input {
+    width: 90%;
+    height: 45px;
+    margin: 6px 0;
+    padding: 0 10px;
+    border-radius: 7px;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.login-form input::placeholder,
+.signup-form input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.submit-btn {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--chicagoRed);
+    width: 90%;
+    height: 45px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    opacity: 0.8;
+}
+
+.fps-btn {
+    width: 90%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fps-btn > * {
+    color: white;
+    font-size: 0.9rem;
+    transition: color 200ms;
+}
+
+.close-form {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.close-form:hover,
+.forget:hover,
+.already:hover,
+.sign-up-btn:hover {
+    color: var(--chicagoRed);
+}
+
+.close-form:focus,
+.forget:focus,
+.already:focus,
+.sign-up-btn:focus {
+    color: var(--chicagoRed);
+}
+
+
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (min-width: 768px) {
+    body {
+        padding: 1rem 0 0 60px;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .navbar {
+        left: 0;
+        width: 60px;
+    }
+
+    .nav-items {
+        gap: 1.7rem;
+    }
+
+    .nav-name,
+    .nav-subtitle,
+    .nav-dropdown-icon,
+    .dark-mode-toggle,
+    .designed > * {
+        opacity: 0;
+        transition: 300ms;
+    }
+
+    .navbar:hover {
+        width: 248px;
+    }
+
+    .navbar:hover .nav-name {
+        opacity: 1;
+    }
+
+    .navbar:hover .nav-subtitle {
+        opacity: 1;
+    }
+
+    .navbar:hover .nav-dropdown-icon {
+        opacity: 1;
+    }
+
+    .navbar:hover .dark-mode-toggle {
+        opacity: 1;
+    }
+
+    .navbar:hover .designed > * {
+        opacity: 1;
+    }
+
+    .fixed-toggle > * {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+/* 
+    .form {
+        padding: 0 20px;
+    } */
+
+    .login-form,
+    .signup-form {
+        max-width: 80%;
+    }
+}
