@@ -133,23 +133,40 @@
 
 
     <!-- ===== LOGIN AND SIGN UP FORM -->
+
     <div class="form">
+
+        <!-- ===== LOGIN ===== -->
         <div class="login-form" id="loginform">
             <a href="#" class="close-form">
                 <i class="fas fa-times"></i>
             </a>
 
             <strong>Login</strong>
-            <form class="input-form">
-                <input type="email" placeholder="Example@gmail.com" name="email" required>
-                <input type="password" placeholder="Password" name="password" required>
-                <a href="#" class="submit-btn">Login</a>
+            <form method="post" class="input-form">
+                <div class="txt-field">
+                    <input type="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+
+                <div class="txt-field">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+
+                <div class="forgetpass">Forgot Password?</div>
+                
+                <input type="submit" value="Login" class="submit-btn">
+               
             </form>
             <div class="fps-btn">
-                <a href="#" class="sign-up-btn">Create Account</a>
+                Not a member? <a href="#" class="sign-up-btn">Create Account</a>
             </div>
         </div>
 
+        <!-- ===== SIGNUP ===== -->
         <div class="signup-form">
             <a href="#" class="close-form">
                 <i class="fas fa-times"></i>
@@ -157,19 +174,33 @@
 
             <strong>Sign up</strong>
             <form class="input-form">
-                <input type="text" placeholder="Full Name" name="fullname" required>
-                <input type="email" placeholder="Email" name="email" required>
-                <input type="password" placeholder="Password" name="password" required>
-                <input type="password" placeholder="Confirm Password" name="password2" required>
-                <a href="#" class="submit-btn">Sign up</a>
+                <div class="txt-field">
+                    <input type="text" name="fullname" required>
+                    <span></span>
+                    <label>Fullname</label>
+                </div>
+                
+                <div class="txt-field">
+                    <input type="email" name="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                
+
+                <div class="txt-field">
+                    <input type="password" name="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                
+                <input type="submit" value="Sign up" class="submit-btn">
+        
             </form>
             <div class="fps-btn">
-                <a href="#" class="forget already">Already Have An Account?</a>
-               
+                <a href="#" class="already">Already Have An Account?</a>
             </div>
         </div>
     </div>
-
 
 
     <!-- ===== FIXED TOGGLE ======  -->
