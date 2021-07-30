@@ -2,6 +2,15 @@
 
 $(document).ready(function(){
 
+    // ===== SEARCH BUTTON ===== //
+    $('.search-icon').click(function() {
+        $('.search').toggleClass('active-search');
+    });
+
+
+
+
+
     // ===== NAVBAR ===== //
     $('#fixed-toggle').click(function(){
         $('#navbar').toggleClass('show-menu');
@@ -20,11 +29,17 @@ $(document).ready(function(){
     });
     
 
+
+
+
     // ===== DROP NAV BAR ===== //
     $('.dropbtn').click(function(){
         $(this).next('.submenu').slideToggle(300);
         $(this).find('.nav-dropdown-icon').toggleClass('rotate');
     });
+
+
+
 
 
     // ===== DARK MODE TOGGLE ===== //
@@ -33,10 +48,16 @@ $(document).ready(function(){
     });
 
 
+
+
+
     //  ===== ANIMATED BURGER MENU ===== //
     $('#menuz').click(function(){
         $(this).toggleClass('open');
     });
+
+
+
 
 
     // ===== LOGIN AND SIGN UP ===== //
@@ -56,8 +77,11 @@ $(document).ready(function(){
         $('.form').removeClass('login-active').removeClass('signup-active');
     });
 
-
 });
+
+
+
+
 
 // VANILLA JS //
 

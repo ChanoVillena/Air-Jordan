@@ -23,11 +23,31 @@
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container">
-            <img class="header-logo" src="./img/jordan-logo.png" alt="jordan logo">
-        </div>
+            <div class="search">
+                <div class="search-field">
+                    <input type="text" placeholder="type to search" class="search-txt">
+                </div>
+
+                <div class="search-icon">
+                    <a href="javascript:void(0);" class="search-btn">
+                        <i class="fas fa-search sea-click"></i>
+                    </a> 
+                </div>
+            </div>   
+
+            <div class="cart-msg">
+                <a href="javascript:void(0);"> <i class="fas fa-shopping-cart"></i> </a> 
+            </div>
+
+            <div class="cart-msg">
+                <a href="javascript:void(0);"> <i class="fas fa-comment-dots"></i> </a>
+            </div>                
+        </div>       
     </header>
+
+
 
     <!-- ===== SIDE NAVBAR ===== -->
     <nav class="navbar" id="navbar">
@@ -62,7 +82,7 @@
 
                         <h3 class="nav-subtitle">Menu</h3>
 
-                        <a href="#" class="nav-links active">
+                        <a href="#slider" class="nav-links active">
                             <i class="uil uil-home nav-icon"></i>
                             <span class="nav-name">Home</span>
                         </a>
@@ -133,12 +153,11 @@
 
 
     <!-- ===== LOGIN AND SIGN UP FORM -->
-
     <div class="form">
 
         <!-- ===== LOGIN ===== -->
         <div class="login-form" id="loginform">
-            <a href="#" class="close-form">
+            <a href="javascript:void(0);" class="close-form">
                 <i class="fas fa-times"></i>
             </a>
 
@@ -162,13 +181,13 @@
                
             </form>
             <div class="fps-btn">
-                Not a member? <a href="#" class="sign-up-btn">Create Account</a>
+                Not a member? <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
             </div>
         </div>
 
         <!-- ===== SIGNUP ===== -->
         <div class="signup-form">
-            <a href="#" class="close-form">
+            <a href="javascript:void(0);" class="close-form">
                 <i class="fas fa-times"></i>
             </a>
 
@@ -197,10 +216,80 @@
         
             </form>
             <div class="fps-btn">
-                <a href="#" class="already">Already Have An Account?</a>
+                <a href="javascript:void(0);" class="already">Already Have An Account?</a>
             </div>
         </div>
     </div>
+
+
+
+    <!-- ===== HERO SLIDER ===== -->
+
+    <div id="slider">
+        <figure>
+                <div class="banner banner1">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/toro-bravo-air-jordan-4.png" class="j4toro" alt="">
+                    </div>
+                </div>
+
+                <div class="banner banner2">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/Jordan-1-Mid-Pink-Shadow.png" class="j4toro" alt="">
+                    </div>
+                </div>
+            
+                <div class="banner banner3">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/Jordan-3-GS-Barely-Grape-441140-500_w900.png" class="j4toro" alt="">
+                    </div>
+                </div>
+            
+                <div class="banner banner4">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/Jordan-1-Low-Black-Red-553558-116-_w900.png" class="j4toro" alt="">
+                    </div>
+                </div>
+           
+                <div class="banner banner1">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/toro-bravo-air-jordan-4.png" class="j4toro" alt="">
+                    </div>
+                </div>
+            <!-- </div> -->
+        </figure>
+    </div>
+
 
 
     <!-- ===== FIXED TOGGLE ======  -->
@@ -215,6 +304,8 @@
             </div>
         </div>
     </div>
+
+
 
     <!-- ===== SCRIPT ===== -->
     <script src="query2.js"></script>
