@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="./img/icons-air-jordan.svg" type="image/x-icon">
 
@@ -23,11 +23,30 @@
 <body>
 
     <!-- ===== HEADER ===== -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-container">
-            <img class="header-logo" src="./img/jordan-logo.png" alt="jordan logo">
-        </div>
+            <div class="search">
+                <div class="search-field">
+                    <input type="text" placeholder="type to search" class="search-txt">
+                </div>
+
+                <div class="search-icon">
+                    <a href="javascript:void(0);" class="search-btn">
+                        <i class="fas fa-search sea-click"></i>
+                    </a> 
+                </div>
+            </div>   
+
+            <div class="cart-msg">
+                <a href="javascript:void(0);"> <i class="fas fa-shopping-cart"></i> </a> 
+            </div>
+
+            <div class="cart-msg">
+                <a href="javascript:void(0);"> <i class="fas fa-comment-dots"></i> </a>
+            </div>                
+        </div>       
     </header>
+
 
     <!-- ===== SIDE NAVBAR ===== -->
     <nav class="navbar" id="navbar">
@@ -46,7 +65,7 @@
 
                         <h3 class="nav-subtitle">Account</h3>
 
-                        <a href="#" class="nav-links">
+                        <a href="#loginform" class="nav-links" id="profile">
                             <i class="uil uil-user nav-icon"></i>
                             <span class="nav-name">Profile</span>
                         </a>
@@ -62,38 +81,33 @@
 
                         <h3 class="nav-subtitle">Menu</h3>
 
-                        <a href="#" class="nav-links active">
+                        <a href="#slider" class="nav-links active">
                             <i class="uil uil-home nav-icon"></i>
                             <span class="nav-name">Home</span>
                         </a>
 
                         <!-- ===== DROPDOWN ===== -->
                         <div class="nav-dropdown" id="dropdown">
-                                <a href="#" class="nav-links dropbtn">
+                                <a href="#categories" class="nav-links dropbtn">
                                     <i class="uil uil-shopping-bag nav-icon"></i>
-                                    <span class="nav-name">Items</span>
+                                    <span class="nav-name">Categories</span>
                                     <i class="uil uil-angle-down nav-icon nav-dropdown-icon"></i>
                                 </a>
                             <div class="nav-dropdown-collapse submenu" id="myDropdown">
                                 <div class="nav-dropdown-content" id="dropdown-content">
-                                    <a href="#" class="nav-dropdown-item">Air Jordan 1's</a>
-                                    <a href="#" class="nav-dropdown-item">Air Jordan 3's</a>
-                                    <a href="#" class="nav-dropdown-item">Air Jordan 4's</a>
+                                    <a href="#menscard" class="nav-dropdown-item">Men's</a>
+                                    <a href="#womenscard" class="nav-dropdown-item">Women's</a>
+                                    <a href="#kidscard" class="nav-dropdown-item">Kid's</a>
                                 </div>
                             </div>
                         </div>
-
-                        <a href="#" class="nav-links">
+            
+                        <a href="#items" class="nav-links">
                             <i class="uil uil-shopping-cart-alt nav-icon"></i>
-                            <span class="nav-name">Order</span>
+                            <span class="nav-name">Items</span>
                         </a>
 
-                        <a href="#" class="nav-links">
-                            <i class="uil uil-info-circle nav-icon"></i>
-                            <span class="nav-name">About Us</span>
-                        </a>
-
-                        <a href="#" class="nav-links">
+                        <a href="#contact" class="nav-links">
                             <i class="uil uil-message nav-icon"></i>
                             <span class="nav-name">Contact Us</span>
                         </a>
@@ -131,14 +145,12 @@
     </nav>
 
 
-
     <!-- ===== LOGIN AND SIGN UP FORM -->
-
     <div class="form">
 
         <!-- ===== LOGIN ===== -->
         <div class="login-form" id="loginform">
-            <a href="#" class="close-form">
+            <a href="javascript:void(0);" class="close-form">
                 <i class="fas fa-times"></i>
             </a>
 
@@ -162,13 +174,13 @@
                
             </form>
             <div class="fps-btn">
-                Not a member? <a href="#" class="sign-up-btn">Create Account</a>
+                Not a member? <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
             </div>
         </div>
 
         <!-- ===== SIGNUP ===== -->
         <div class="signup-form">
-            <a href="#" class="close-form">
+            <a href="javascript:void(0);" class="close-form">
                 <i class="fas fa-times"></i>
             </a>
 
@@ -197,7 +209,266 @@
         
             </form>
             <div class="fps-btn">
-                <a href="#" class="already">Already Have An Account?</a>
+                <a href="javascript:void(0);" class="already">Already Have An Account?</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== HERO SLIDER ===== -->
+    <section id="slider">
+        <figure>
+                <div class="banner banner1">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#categories" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/toro-bravo-air-jordan-4.png" class="j4toro" alt="">
+                    </div>
+                </div>
+
+                <div class="banner banner2">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#categories" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/Jordan-1-Mid-Pink-Shadow.png" class="j4toro" alt="">
+                    </div>
+                </div>
+            
+                <div class="banner banner3">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#categories" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/Jordan-3-GS-Barely-Grape-441140-500_w900.png" class="j4toro" alt="">
+                    </div>
+                </div>
+            
+                <div class="banner banner4">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#categories" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/Jordan-1-Low-Black-Red-553558-116-_w900.png" class="j4toro" alt="">
+                    </div>
+                </div>
+           
+                <div class="banner banner1">
+                    <div class="banner-text">
+                        <span>Limited Offer</span>
+                        <h3>25% off with <font>free shipping.</font></h3>
+                        <a href="#categories" class="slider-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="banner-shoe">
+                        <img src="./img/toro-bravo-air-jordan-4.png" class="j4toro" alt="">
+                    </div>
+                </div>
+            <!-- </div> -->
+        </figure>
+    </section>
+
+
+    <!-- ===== FEATURED CATEGORIES ===== -->
+    <section class="categories" id="categories">
+        <div class="categoriestitle">
+            <h1 class="titlecat">FEATURED CATEGORIES</h1>
+        </div>
+        
+
+        <div class="categoriescardsec">
+            <div class="menscard" id="menscard">
+                <a href="#/">Men's</a>
+            </div>
+
+            <div class="womenscard" id="womenscard">
+                <a href="#/">Women's</a>
+            </div>
+
+            <div class="kidscard" id="kidscard">
+                <a href="#/">Kid's</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FEATURED ITEMS ===== -->
+    <section class="items" id="items">
+        <div class="itemstitle">
+            <h1>FEATURED ITEMS</h1>
+        </div>
+
+        <div class="itemssec">
+            <div class="itemscard">
+                <img src="./img/Jordan-1-Mid-Pink-Shadow.png" class="cardimg" alt="">
+
+                <div class="carddata">
+                    <h1 class="cardtitle">J1 Mid Pink Shadow</h1>
+                    <span class="cardprice">$99</span>
+                    <p class="cardcaption">Features an unchanged toe, mid-panel, and rear overlay set.</p>
+                    <a href="#/" class="cardbtn">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="itemscard itemscard2">
+                <img src="./img/Jordan-3-GS-Barely-Grape-441140-500_w900.png" class="cardimg" alt="">
+
+                <div class="carddata">
+                    <h1 class="cardtitle cardtitle2">J3 Barely Grape</h1>
+                    <span class="cardprice">$99</span>
+                    <p class="cardcaption">The Jordan Brand will be looking to squeeze some fresh juice.</p>
+                    <a href="#/" class="cardbtn cardbtn2">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="itemscard itemscard3">
+                <img src="./img/$_58.png" class="cardimg" alt="">
+
+                <div class="carddata">
+                    <h1 class="cardtitle cardtitle3">J1 Retro High OG</h1>
+                    <span class="cardprice">$99</span>
+                    <p class="cardcaption">Features an unchanged toe, mid-panel, and rear overlay set.</p>
+                    <a href="#/" class="cardbtn cardbtn3">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="itemscard itemscard4">
+                <img src="./img/59-590589_air-jordan-vi-michael-jordan-shoes-90s.png" class="cardimg" alt="">
+
+                <div class="carddata">
+                    <h1 class="cardtitle cardtitle4">J6 Retro Infrared</h1>
+                    <span class="cardprice">$99</span>
+                    <p class="cardcaption">Features an unchanged toe, mid-panel, and rear overlay set.</p>
+                    <a href="#/" class="cardbtn cardbtn4">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="itemscard itemscard5">
+                <img src="./img/5air-jordan-png-pic-background-png-play.png" class="cardimg" alt="">
+
+                <div class="carddata">
+                    <h1 class="cardtitle cardtitle5">J1 University Blue</h1>
+                    <span class="cardprice">$99</span>
+                    <p class="cardcaption">Features an unchanged toe, mid-panel, and rear overlay set.</p>
+                    <a href="#/" class="cardbtn cardbtn5">Buy Now</a>
+                </div>
+            </div>
+
+            <div class="itemscard itemscard6">
+                <img src="./img/royalchicago-1-top-three-release-info-5.png" class="cardimg" alt="">
+
+                <div class="carddata">
+                    <h1 class="cardtitle cardtitle6">J1 Royal Chicago</h1>
+                    <span class="cardprice">$99</span>
+                    <p class="cardcaption">Features an unchanged toe, mid-panel, and rear overlay set.</p>
+                    <a href="#/" class="cardbtn cardbtn6">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="contacttitle">
+            <h1>CONTACT US</h3>
+        </div>
+
+        <div class="contactsec">
+            <div class="contactinfo">
+                <div class="infocon">
+                    <i class="uil uil-location-pin-alt"></i>
+                    
+                    <div>
+                        <h1>Shop Location</h1>
+                        <span>Novaliches Quezon City</span>
+                    </div>
+                </div>
+
+                <div class="infocon">
+                    <i class="uil uil-phone"></i>
+                    
+                    <div>
+                        <h1>Call Us</h1>
+                        <span>+639310342909</span>
+                    </div>
+                </div>
+
+                <div class="infocon">
+                    <i class="uil uil-facebook-f"></i>
+                    
+                    <div>
+                        <h1>Facebook Page</h1>
+                        <span>Christian Jay D. Villena</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactform">
+                <div class="contactformtittle">Email Us</div>
+
+                <form action="https://formspree.io/f/xoqyyepl" method="POST">
+                    <div class="inputdata">
+                        <input type="text" name="name" autocomplete="off" required>
+                        <span></span>
+                        <label for="">Fullname</label>
+                    </div>
+
+                    <div class="inputdata">
+                        <input type="email" name="_replyto" class="emailform" autocomplete="off" required>
+                        <span></span>
+                        <label for="">email address</label>
+                    </div>
+
+                    <div class="inputdata">
+                        <input type="text" name="subject" autocomplete="off" required>
+                        <span></span>
+                        <label for="">subject</label>
+                    </div>
+
+                    <div class="inputdata messageform">
+                        <textarea name="message" class="messagearea" name="" id="" cols="30" rows="10" wrap="soft" required></textarea>
+                        <span class="messagespan"></span>
+                        <label class="messagelabel" for="">write a message</label>
+                    </div>
+
+                    <button class="contactbtn" type="submit" value="send">send message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer">
+        <div class="footercon container">
+            <div class="footertitle">
+                <img src="./img/icons-air-jordan.svg" alt="">
+            </div>
+
+            <div class="footericon">
+                <a href="#/"><i class="fab fa-facebook-square"></i></a>
+                <a href="#/"><i class="fab fa-instagram-square"></i></a>
+                <a href="#/"><i class="fab fa-twitter-square"></i></a>
+            </div>
+
+            <div class="footerinfo">
+                <span>Designed by Christian Jay Villena</span>
+                <span><i class="far fa-copyright"></i> 2021 copyright all right reserved</span>
+                <span><i class="fas fa-map-marker-alt"></i> philippines</span>
             </div>
         </div>
     </div>
@@ -216,9 +487,11 @@
         </div>
     </div>
 
+
+
     <!-- ===== SCRIPT ===== -->
-    <script src="query2.js"></script>
     <script src="query.js"></script>
+    
     
 </body>
 </html>
